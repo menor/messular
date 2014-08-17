@@ -24,4 +24,9 @@ describe('TodoCtrl', function () {
     scope.todos[scope.todos.length - 1].label.should.equal(todo.label);
     scope.todos[scope.todos.length - 1].isDone.should.equal(false);
   });
+
+  it('should delete todos on delete()', function() {
+    todoCtrl();
+    scope.todos.length.should.equal(0);
+  });
 });
