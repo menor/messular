@@ -16,6 +16,11 @@ angular
       $scope.label = '';
     };
 
+    $scope.delete = function () {
+      var index = $scope.todos.indexOf( this.todo );
+      $scope.todos.splice( index, 1 );
+    };
+
     $scope.check = function () {
       this.todo.isDone = !this.todo.isDone;
     };
