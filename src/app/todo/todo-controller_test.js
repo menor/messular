@@ -26,7 +26,13 @@ describe('TodoCtrl', function () {
   });
 
   it('should delete todos on delete()', function() {
+    var todo = {label: 'A new todo', isDone: false};
     todoCtrl();
-    scope.todos.length.should.equal(0);
+    scope.label = todo.label;
+    scope.add();
+    var size = scope.todos.length;
+    todoCtrl();
+    scope.delete();
+    scope.todos.length.should.equal( size - 1 );
   });
 });
