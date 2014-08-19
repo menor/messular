@@ -4,7 +4,7 @@
     <label>
       <input type="checkbox" ng-click="check()" ng-model="todo.isDone"/>
       &nbsp;{{todo.label}}
-      <input type="submit" ng-click="delete()" ng-model="todo.delete" value="delete"/>
+      <button class="todo-deleteButton" type="submit" ng-click="delete()" ng-model="todo.delete" value="delete"/>Delete</button>
     </label>
   </li>
   <li class="todo-item">
